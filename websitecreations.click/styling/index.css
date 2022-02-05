@@ -1,0 +1,210 @@
+   body {
+       background-color: rgb(51, 52, 53);
+   }
+   
+   .parallax {
+       background-image: url("/documents/source_code.png");
+       min-height: 400px;
+       margin-top: -18px;
+       background-attachment: fixed;
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+   }
+   
+   .bellow_parallax {
+       height: 1000px;
+       background: rgb(32, 33, 36);
+   }
+   
+   * {
+       margin: 0;
+       padding: 0;
+   }
+   
+   .leftCover {
+       position: absolute;
+       top: 0;
+       left: 0;
+       background-color: rgb(32, 33, 36);
+       height: 100%;
+       width: 50%;
+       animation-name: leftCover;
+       animation-duration: 1.5s;
+       z-index: -20;
+   }
+   
+   .rightCover {
+       position: absolute;
+       right: 0;
+       top: 0;
+       background-color: rgb(32, 33, 36);
+       height: 100%;
+       width: 50%;
+       animation-name: rightCover;
+       animation-duration: 1.5s;
+       z-index: -20;
+   }
+   
+   .h1 {
+       color: rgb(255, 255, 255);
+       text-align: center;
+       animation-name: header;
+       animation-delay: 1.6s;
+       animation-duration: 1.5s;
+       animation-fill-mode: forwards;
+       transform: translateY(-100%);
+   }
+   /* navbar */
+   
+   .sidenav {
+       height: 100%;
+       width: 0;
+       position: fixed;
+       z-index: 1;
+       top: 0;
+       left: 0;
+       background-color: #111;
+       overflow-x: hidden;
+       transition: 0.5s;
+       padding-top: 60px;
+   }
+   
+   .sidenav a {
+       padding: 8px 8px 8px 32px;
+       text-decoration: none;
+       font-size: 25px;
+       color: #818181;
+       display: block;
+       transition: 0.3s;
+   }
+   
+   .sidenav a:hover {
+       color: #f1f1f1;
+   }
+   
+   .sidenav .closebtn {
+       position: absolute;
+       top: 0;
+       right: 25px;
+       font-size: 36px;
+       margin-left: 50px;
+   }
+   
+   .one {
+       width: 45px;
+       height: 6px;
+       border-radius: 20px;
+       background: rgb(255, 255, 255);
+       margin-left: 20px;
+       margin-bottom: 5px;
+       cursor: pointer;
+   }
+   
+   .two {
+       width: 45px;
+       height: 6px;
+       border-radius: 20px;
+       background: rgb(255, 255, 255);
+       margin-left: 20px;
+       cursor: pointer;
+       margin-bottom: 5px;
+   }
+   
+   .three {
+       width: 45px;
+       height: 6px;
+       border-radius: 20px;
+       background: rgb(255, 255, 255);
+       margin-left: 20px;
+       cursor: pointer;
+   }
+   
+   .burger {
+       position: absolute;
+       cursor: pointer;
+       animation-name: fade-in;
+       animation-duration: 1.5s;
+   }
+   
+   .construction {
+       margin-top: 701px;
+       height: 50px;
+       background: repeating-linear-gradient( 45deg, yellow 0px, yellow 40px, black 40px, black 80px);
+       animation-name: construction;
+       animation-duration: 1.5s;
+   }
+   
+   .info {
+       position: absolute;
+       color: white;
+       top: 700px;
+       margin-left: 37.5%;
+       font-size: large;
+   }
+   
+   .white {
+       color: white;
+   }
+   
+   .allSides10pxMargin {
+       margin: 10px;
+   }
+   
+   @media screen and (max-height: 450px) {
+       .sidenav {
+           padding-top: 15px;
+       }
+       .sidenav a {
+           font-size: 18px;
+       }
+   }
+   /* animations */
+   
+   @keyframes rightCover {
+       0% {
+           transform: translateX(100%)
+       }
+       100% {
+           transform: translateX(0%);
+       }
+   }
+   
+   @keyframes leftCover {
+       0% {
+           transform: translateX(-100%);
+       }
+       100% {
+           transform: translateX(0%);
+       }
+   }
+   
+   @keyframes construction {
+       0% {
+           transform: translateX(-110%);
+       }
+       100% {
+           transform: translateX(0%);
+       }
+   }
+   
+   @keyframes header {
+       0% {
+           transform: translateY(-100%);
+       }
+       100% {
+           transform: translateY(0%);
+       }
+   }
+   
+   @keyframes fade-in {
+       0% {
+           transform: scale(0);
+       }
+       90% {
+           transform: scale(1.1);
+       }
+       100% {
+           transform: scale(1);
+       }
+   }

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="/documents/website_logo.jpg">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RLPX0V3G0M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RLPX0V3G0M');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kreacje Internetowe | Ty wymyślasz my tworzymy | Twórcy stron internetowych premium</title>
+    <link rel="stylesheet" href="/languages/Polish/styling_pl/index_pl.css">
+
+</head>
+
+<body>
+    <div class="leftCover"></div>
+    <div class="rightCover"></div>
+
+    <h1 class="h1">Witamy w Krecjach Intrnetowych</h1>
+
+    <!-- navbar -->
+    <div id="sidenavBar" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNavbar()">&times;</a>
+        <a href="/languages/Polish/documents_pl/about_pl.html">O nas</a>
+        <a href="/languages/Polish/documents_pl/contact_pl.html">Kontakt</a>
+        <a href="#">Serwisy</a>
+        <a href="documents/special.html">specjalne wyróżnienia</a>
+        <a href="documents/examcountdown.html">Odliczanie do egzaminów</a>
+
+    </div>
+    <a href="#" onclick="openNavbar()">
+        <div class="burger">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+    </a>
+    <div class="parallax"></div>
+    <div class="bellow_parallax"></div>
+    <script>
+        function openNavbar() {
+            document.getElementById("sidenavBar").style.width = "200px";
+        }
+
+        function closeNavbar() {
+            document.getElementById("sidenavBar").style.width = "0";
+        }
+    </script>
+    <script>
+        // Create cookie
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        // Delete cookie
+        function deleteCookie(cname) {
+            const d = new Date();
+            d.setTime(d.getTime() + (24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=;" + expires + ";path=/";
+        }
+
+        // Read cookie
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        // Set cookie consent
+        function acceptCookieConsent() {
+            deleteCookie('user_cookie_consent');
+            setCookie('user_cookie_consent', 1, 30);
+            document.getElementById("cookieNotice").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
